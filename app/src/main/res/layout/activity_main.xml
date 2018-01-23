@@ -1,18 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.demo.jianjunhuang.bottomlayoutdemo.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9" />
 
-</android.support.constraint.ConstraintLayout>
+    <com.library.jianjunhuang.bottomlayout.BottomLayout
+        android:id="@+id/bottomlayout"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <com.library.jianjunhuang.bottomlayout.TabView
+            app:textSize="11sp"
+            android:padding="8dp"
+            android:id="@+id/schedule"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:img="@drawable/schedule_icon"
+            app:selectedImg="@drawable/schedule_click_icon"
+            app:selectedTextColor="@color/selectedTextColor"
+            app:text="日程"
+            app:textColor="@color/textColor" />
+
+        <com.library.jianjunhuang.bottomlayout.TabView
+            android:id="@+id/early_up"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="8dp"
+            app:img="@drawable/early_icon"
+            app:selectedImg="@drawable/early_click_icon"
+            app:selectedTextColor="@color/selectedTextColor"
+            app:text="早起"
+            app:textColor="@color/textColor"
+            app:textSize="11sp" />
+
+        <com.library.jianjunhuang.bottomlayout.TabView
+            android:padding="8dp"
+            android:id="@+id/tools"
+            app:textSize="11sp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:img="@drawable/tool_icon"
+            app:selectedImg="@drawable/tool_click_icon"
+            app:selectedTextColor="@color/selectedTextColor"
+            app:text="小工具"
+            app:textColor="@color/textColor" />
+
+        <com.library.jianjunhuang.bottomlayout.TabView
+            android:padding="8dp"
+            android:id="@+id/mine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:textSize="11sp"
+            android:layout_weight="1"
+            app:img="@drawable/mine_icon"
+            app:selectedImg="@drawable/mine_click_icon"
+            app:selectedTextColor="@color/selectedTextColor"
+            app:text="我的"
+            app:textColor="@color/textColor" />
+
+    </com.library.jianjunhuang.bottomlayout.BottomLayout>
+
+</LinearLayout>

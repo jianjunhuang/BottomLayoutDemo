@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TabView">
+        <attr name="img" format="reference" />
+        <attr name="selectedImg" format="reference" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="selectedTextColor" format="color|reference" />
+        <attr name="imgWidth" format="dimension|reference" />
+        <attr name="imgHeight" format="dimension|reference" />
+        <attr name="textSize" format="dimension|reference" />
+        <attr name="text" format="string|reference" />
+    </declare-styleable>
+</resources>
